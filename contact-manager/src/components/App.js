@@ -59,17 +59,11 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route
-            path="/"
-            exact
-            render={(props) => (
-              <ContactList
-                {...props}
-                contacts={contacts}
-                getContactId={removeContactHandler}
-              />
-            )}
-          />
+          <Route path="/" 
+          element={<ContactList contacts={contacts} 
+          getContactId={removeContactHandler} />} />
+            
+          
           <Route
             path="/add"
             render={(props) => (
