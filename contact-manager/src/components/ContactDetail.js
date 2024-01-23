@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import user from "src/images/user.png";
+// import user from "contact-manager/src/images/user.png";
 
 const ContactDetail = (props) => {
   const { name, email } = props.location.state.contact;
