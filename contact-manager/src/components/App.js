@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { v4 as idGnr } from 'uuid'
 import Header from './Header';
 import AddContact from './AddContact';
 import ContactList from './ContactList'
+import ContactDetail from './ContactDetail'
 //Testing push
 
 function App() {
@@ -51,11 +53,33 @@ function App() {
   //  // localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts));
   // },[contacts]);
 
+
   return (
     <div className="ui container">
-      <Header/>
-      <AddContact addContactHandler={addContactHandler}/>
-      <ContactList contacts={contacts} getContactId={removeContactHandler}/>
+      <Router>
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            exact
+            render={(props) => (
+              <ContactList
+                {...props}
+                contacts={contacts}
+                getContactId={removeContactHandler}
+              />
+            )}
+          />
+          <Route
+            path="/add"
+            render={(props) => (
+              <AddContact {...props} addContactHandler={addContactHandler} />
+            )}
+          />
+
+          <Route path="/contact/:id" component={ContactDetail} />
+        </Routes>
+      </Router>
     </div>
   );
 }
