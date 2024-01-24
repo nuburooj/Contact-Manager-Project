@@ -11,8 +11,8 @@ import EditContact from './EditContact';
 
 
 function App() {
-  const LOCAL_STORAGE_KEY = 'contacts'
-  const [contacts, setContacts] = useState([])
+  const LOCAL_STORAGE_KEY = 'contacts';
+  const [contacts, setContacts] = useState([]);
 
   //RetrieveContacts
   const retrieveContacts = async () => {
@@ -90,23 +90,18 @@ function App() {
             getContactId={removeContactHandler} 
             />} 
             />
-            
-          
           <Route 
             path="/add" 
             element={<AddContact 
             addContactHandler={addContactHandler} 
             />} 
             />
-
           <Route 
             path="/edit/:id" 
             element={<EditContact 
             updateContactHandler={updateContactHandler} 
             />} 
             />
-
-
           <Route path="/contact/:id" component={ContactDetail} />
         </Routes>
       </Router>
