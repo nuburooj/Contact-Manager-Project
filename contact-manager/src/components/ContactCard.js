@@ -1,9 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import user from "../images/user.png";
+import trashSound from "../Sound/trashSound.mp3";
 
 const ContactCard = (props) => {
   const { id, name, email } = props.contact;
+
+  const playTrashSound = () => {
+    const audio = new Audio(trashSound);
+    audio.play();
+  };
+
   return (
     <div className="item">
       <img className="ui avatar image" src={user} alt="user" />
@@ -18,8 +25,13 @@ const ContactCard = (props) => {
       <i
         className="trash alternate outline icon"
         style={{ color: "red", marginTop: "7px", marginLeft: "10px" }}
-        onClick={() => props.clickHander(id)}
+        onClick={() => {
+          playTrashSound();
+          props.clickHander(id);
+          // console.log("Delete button clicked");
+        }}
       ></i>
+
       <Link to={{ pathname: `/edit/${id}`, state: { contact: props.contact } }}>
         <i
           className="edit alternate outline icon"
