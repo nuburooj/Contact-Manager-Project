@@ -17,6 +17,7 @@ class AddContact extends React.Component {
         this.props.addContactHandler(this.state);
         this.setState({name: "", email: ""});
         // console.log(this.state)
+        alert('Contact added! Click Contact Manager to go home.')
     }
     render(){
         return (
