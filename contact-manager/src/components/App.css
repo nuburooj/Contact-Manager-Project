@@ -28,3 +28,18 @@ i.icon {
 .center-div {
   text-align: center;
 }
+
+/* Default styles for light mode */
+body {
+  background-color: #ffffff0a;
+  color: #000000;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+
+

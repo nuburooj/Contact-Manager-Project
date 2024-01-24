@@ -15,6 +15,7 @@ function App() {
   const [contacts, setContacts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
   const [searchResults, setSearchResults] = useState([])
+  const [isDark, setIsDarkMode] = useState(false)
 
   //RetrieveContacts
   const retrieveContacts = async () => {
@@ -100,7 +101,9 @@ function App() {
 
 
   return (
+    <div className="App" data-theme={isDark ? "dark" : "light"}>
     <div className="ui container">
+      
       <Router>
         <Header />
         <Routes>
@@ -128,6 +131,7 @@ function App() {
           <Route path="/contact/:id" component={ContactDetail} />
         </Routes>
       </Router>
+    </div>
     </div>
   );
 
