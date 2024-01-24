@@ -15,6 +15,7 @@ import EditContact from './EditContact';
 function App() {
   const LOCAL_STORAGE_KEY = 'contacts';
   const [contacts, setContacts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
 
   //RetrieveContacts
   const retrieveContacts = async () => {
@@ -71,6 +72,9 @@ function App() {
       setContacts(newContactList);
     }
 
+    const searchHandler = (e) => {}
+    
+
 
   useEffect(() => {
     // console.log("useEffect - Retrieving data from local storage");
@@ -115,6 +119,8 @@ function App() {
             element={<ContactList 
             contacts={contacts} 
             getContactId={removeContactHandler} 
+            term={searchTerm} 
+            searchKeyword={searchHandler}
             />} 
             />
           <Route 
