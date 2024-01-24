@@ -18,6 +18,9 @@ const ContactList = (props) => {
       />
     );
   });
+
+  const getSearchTerm = (e) => {}
+    
   return (
     <div className="main">
       <h2>
