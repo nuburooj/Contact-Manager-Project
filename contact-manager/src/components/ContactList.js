@@ -21,6 +21,7 @@ const ContactList = (props) => {
 
   const getSearchTerm = (e) => {
     // console.log(inputEl.current.value)
+    props.searchKeyword(inputEl.current.value)
   }
     
   return (

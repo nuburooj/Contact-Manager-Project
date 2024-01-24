@@ -58,7 +58,10 @@ function App() {
       setContacts(newContactList);
     }
 
-    const searchHandler = (e) => {}
+    const searchHandler = (searchTerm) => {
+        // console.log(searchTerm)
+        setSearchTerm(searchTerm)
+    }
     
 
 
