@@ -58,7 +58,12 @@ i.icon {
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  display: flex;
+  align-items: center;
+  color: rgb(214, 211, 211); 
+  font-size: 13px; 
 }
+
 
 .slider:before {
   position: absolute;
@@ -73,11 +78,11 @@ i.icon {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: hsl(240, 1%, 22%);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px hsl(240, 1%, 22%);
 }
 
 input:checked + .slider:before {
@@ -87,6 +92,7 @@ input:checked + .slider:before {
 }
 
 /* dm default colors  */
+
 body {
   background-color: #ffffff0a;
   color: #000000;
@@ -94,7 +100,12 @@ body {
 
 [data-theme="dark"] {
   background-color: #1e1e1e;
-  color: #ffffff;
+  color: #100f0f;
+}
+
+/* header text */
+.contact-manager-heading {
+  margin-right: 210px; 
 }
 
 

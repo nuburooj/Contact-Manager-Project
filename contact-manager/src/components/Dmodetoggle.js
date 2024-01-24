@@ -12,7 +12,9 @@ export const Dmodetoggle = () => {
     <div className="dark-mode-toggle">
       <label className="switch">
         <input type="checkbox" onChange={() => setIsDarkMode(!isDark)} checked={isDark} />
-        <span className="slider round"></span>
+        <span className="slider round">
+          {isDark ? 'Dark Mode' : 'Light Mode'}
+        </span>
       </label>
     </div>
   );
