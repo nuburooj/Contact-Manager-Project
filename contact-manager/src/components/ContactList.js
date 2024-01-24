@@ -26,6 +26,12 @@ const ContactList = (props) => {
           <button className="ui button blue right">Add Contact</button>
         </Link>
       </h2>
+      <div className="ui search">
+        <div className="ui icon input">
+          <input className="prompt" type="text" placeholder="Search" />
+          <i className="search icon"></i>
+        </div>
+      </div>
       <div className="ui celled list">{renderContactList}</div>
     </div>
   );
