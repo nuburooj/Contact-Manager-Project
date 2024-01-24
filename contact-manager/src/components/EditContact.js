@@ -22,7 +22,8 @@ const EditContact = (props) => {
 
 useEffect(()=>{
     
-    fetch(`http://localhost:3006/contacts/${id}`).then((res) => res.json()).then((data) => {
+    fetch(`http://localhost:3006/contacts/${id}`)
+    .then((res) => res.json()).then((data) => {
         console.log(data)
         setName(data.name)
         setEmail(data.email)
@@ -42,7 +43,7 @@ const handleSubmit =async()=>{
         })
     });
     const json =await res.json()
-    alert('updated! go back')
+    alert('updated! Click Contact Manager to go home.')
 
 }
 
