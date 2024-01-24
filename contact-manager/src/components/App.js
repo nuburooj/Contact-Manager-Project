@@ -46,7 +46,8 @@ function App() {
     // setContacts(updatedContacts)
   }
 
-    const removeContactHandler = (id) => {
+    const removeContactHandler = async (id) => {
+      await api.delete(`/contacts/${id}`);
       const newContactList = contacts.filter((contact) => {
         return contact.id !== id
       })
