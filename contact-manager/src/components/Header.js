@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Dmodetoggle } from './Dmodetoggle';
 
 const Header = () => {
-    return(
-        <div className="ui fixed menu">
-            <div className="ui container center">
-                <h2>Contact Manager</h2>
-            </div>
-        </div>
-    );
+  return (
+    <div className="ui fixed menu">
+      <div className="ui container center">
+        <h2>Contact Manager</h2>
+        <Dmodetoggle /> 
+      </div>
+    </div>
+  );
 };
 
 export default Header;
