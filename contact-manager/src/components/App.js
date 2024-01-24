@@ -99,15 +99,12 @@ function App() {
             />} 
             />
 
-          <Route
-            path="/edit"
-            render={(props) => (
-              <EditContact
-                {...props}
-                updateContactHandler={updateContactHandler}
-              />
-            )}
-          />
+          <Route 
+            path="/edit/:id" 
+            element={<EditContact 
+            updateContactHandler={updateContactHandler} 
+            />} 
+            />
 
 
           <Route path="/contact/:id" component={ContactDetail} />
