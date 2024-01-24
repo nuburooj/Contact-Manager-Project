@@ -7,6 +7,7 @@ import Header from './Header';
 import AddContact from './AddContact';
 import ContactList from './ContactList';
 import ContactDetail from './ContactDetail';
+import EditContact from './EditContact';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
     
     const response = await api.post("/contacts", request)
     setContacts([...contacts, response.data])
-    console.log(response)
+    // console.log(response)
     // we are accessing the contacts already present in local storage
     // let exsContacts=JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     // we are setting the updated contacts array in which new contacts will be added
@@ -45,6 +46,8 @@ function App() {
     // localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedContacts));
     // setContacts(updatedContacts)
   }
+
+    const updateContactHandler = () => {}
 
     const removeContactHandler = async (id) => {
       await api.delete(`/contacts/${id}`);
@@ -80,10 +83,32 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<ContactList contacts={contacts} getContactId={removeContactHandler} />} />
+          <Route 
+            path="/" 
+            element={<ContactList 
+            contacts={contacts} 
+            getContactId={removeContactHandler} 
+            />} 
+            />
             
           
-          <Route path="/add" element={<AddContact addContactHandler={addContactHandler} />} />
+          <Route 
+            path="/add" 
+            element={<AddContact 
+            addContactHandler={addContactHandler} 
+            />} 
+            />
+
+          <Route
+            path="/edit"
+            render={(props) => (
+              <EditContact
+                {...props}
+                updateContactHandler={updateContactHandler}
+              />
+            )}
+          />
+
 
           <Route path="/contact/:id" component={ContactDetail} />
         </Routes>
