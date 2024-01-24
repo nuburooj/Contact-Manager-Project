@@ -107,7 +107,7 @@ function App() {
           <Route 
             path="/" 
             element={<ContactList 
-            contacts={contacts} 
+            contacts={searchTerm.length < 1 ? contacts : searchResults} 
             getContactId={removeContactHandler} 
             term={searchTerm} 
             searchKeyword={searchHandler}
