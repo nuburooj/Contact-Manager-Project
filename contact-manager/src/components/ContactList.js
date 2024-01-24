@@ -18,6 +18,9 @@ const ContactList = (props) => {
       />
     );
   });
+
+  const getSearchTerm = (e) => {}
+    
   return (
     <div className="main">
       <h2>
@@ -28,7 +31,7 @@ const ContactList = (props) => {
       </h2>
       <div className="ui search">
         <div className="ui icon input">
-          <input className="prompt" type="text" placeholder="Search" />
+          <input className="prompt" type="text" placeholder="Search" value={ props.term} onChange={ getSearchTerm} />
           <i className="search icon"></i>
         </div>
       </div>
