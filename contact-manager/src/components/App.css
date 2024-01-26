@@ -129,6 +129,13 @@ body {
 }
 
 
+[data-theme="dark"] .menu{
+  background-color: #100f0f;
+}
+
+[data-theme="dark"] #prompt {
+  background-color: gray;
+}
 
 
 

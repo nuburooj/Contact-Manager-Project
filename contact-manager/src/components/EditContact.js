@@ -22,7 +22,7 @@ const EditContact = (props) => {
 
 useEffect(()=>{
     
-    fetch(`http://localhost:3006/contacts/${id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/contacts/${id}`)
     .then((res) => res.json()).then((data) => {
         console.log(data)
         setName(data.name)
@@ -30,9 +30,10 @@ useEffect(()=>{
     })
 },[])
 
-const handleSubmit =async()=>{
+const handleSubmit =async(event)=>{
+  event.preventDefault()
 
-   const res =  await fetch(`http://localhost:3006/contacts/${id}`, {
+   const res =  await fetch(`${process.env.REACT_APP_API_URL}/contacts/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -44,7 +45,13 @@ const handleSubmit =async()=>{
     });
     const json =await res.json()
     alert('updated! Click Contact Manager to go home.')
+    clearForm()
 
+}
+
+const clearForm =()=>{
+  setName('');
+  setEmail('')
 }
 
   return (

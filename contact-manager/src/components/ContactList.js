@@ -34,7 +34,7 @@ const ContactList = (props) => {
       </h2>
       <div className="ui search">
         <div className="ui icon input">
-          <input ref={inputEl} className="prompt" type="text" placeholder="Search Contacts" value={ props.term} onChange={getSearchTerm} />
+          <input ref={inputEl} className="prompt" type="text" id='prompt' placeholder="Search Contacts" value={ props.term} onChange={getSearchTerm} />
           <i className="search icon"></i>
         </div>
       </div>
