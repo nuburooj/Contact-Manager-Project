@@ -97,15 +97,17 @@ input:checked + .slider:before {
 
 body {
   position: absolute;
-    left: 311px;
+    left: 418px;
+    right: 418px;
     margin: -3px;
     padding: 0px;
-    width: 392px;
+    width: 474px;
+    height: 28px;
     overflow-x: hidden;
     min-width: 237px;
     background: #fff;
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1.4285em;
 }
 
@@ -118,7 +120,7 @@ body {
 .contact-manager-heading {
   margin-right: 210px; 
   position: absolute;
-  left: 418px;
+  left: 540px;
   top: 2px;
 }
 
