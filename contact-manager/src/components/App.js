@@ -99,9 +99,9 @@ function App() {
   //  // localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts));
   // },[contacts]);
 
-
+//data-theme={isDark ? "dark" : "light"}
   return (
-    <div className="App" data-theme={isDark ? "dark" : "light"}>
+    <div className="App" >
     <div className="ui container">
       
       <Router>
