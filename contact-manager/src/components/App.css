@@ -36,10 +36,12 @@ i.icon {
 }
 
 .switch {
-  position: relative;
+  position: absolute;
   display: inline-block;
   width: 60px;
   height: 34px;
+  right: 254px;
+  top: 2px;
 }
 
 .switch input {
@@ -94,8 +96,17 @@ input:checked + .slider:before {
 /* dm default colors  */
 
 body {
-  background-color: #ffffff0a;
-  color: #000000;
+  position: absolute;
+    left: 311px;
+    margin: -3px;
+    padding: 0px;
+    width: 392px;
+    overflow-x: hidden;
+    min-width: 237px;
+    background: #fff;
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.4285em;
 }
 
 [data-theme="dark"] {
@@ -106,6 +117,9 @@ body {
 /* header text */
 .contact-manager-heading {
   margin-right: 210px; 
+  position: absolute;
+  left: 418px;
+  top: 2px;
 }
 
 .dark-mode-toggle {

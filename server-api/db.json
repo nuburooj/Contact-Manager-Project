@@ -11,11 +11,6 @@
       "email": "Nuburooj@gmail.com"
     },
     {
-      "id": "b78a463c-40b8-44b6-a1f8-c854d4fa77e1",
-      "name": "Hussein",
-      "email": "Hussein@gmail.com"
-    },
-    {
       "id": "5432a864-6cd7-4115-8b67-10d67dd92a2b",
       "name": "Eleanor",
       "email": "Eleanor@gmail.com"
@@ -24,16 +19,6 @@
       "name": "Lantz",
       "email": "Lantz@gmail.com",
       "id": "897f2bcd-4fe2-4bfa-aec9-27dada5bf300"
-    },
-    {
-      "id": "f7972388-dcdc-448b-8042-c8790379f453",
-      "name": "test",
-      "email": "test"
-    },
-    {
-      "id": "03fae550-b244-4348-bdc7-c4f0763b4ba0",
-      "name": "test",
-      "email": "test"
     }
   ]
 }
