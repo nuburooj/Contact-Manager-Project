@@ -130,7 +130,7 @@ body {
 
 
 [data-theme="dark"] .menu{
-  background-color: #100f0f;
+  background-color: gray;
 }
 
 [data-theme="dark"] #prompt {
